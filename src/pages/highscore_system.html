@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="/src/js/HighScore.js"></script>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1 {
+            color: coral;
+            font-size: 60px;
+            font-style: italic;
+            font-family: algerian, courier;
+            text-decoration: overline;
+            text-shadow: 7px 7px black;
+        }
+
+        h3 {
+            color: coral;
+            font-size: 40px;
+            font-style: oblique;
+            letter-spacing: -1px;
+            font-family: algerian, courier;
+            text-decoration: underline;
+            text-shadow: 3px 3px black;
+        }
+
+        h4 {
+            color: coral;
+            font-size: 35px;
+            font-family: cursive;
+            text-decoration: underline;
+            text-shadow: 2px 2px black;
+        }
+
+        p.color {
+            color: coral;
+        }
+
+        .background-image {
+            background-image: url("../image/hss_bck.jpg");
+            background-color: #cccccc;
+            height: 1000px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+
+        .flex-container {
+            display: flex;
+            flex-wrap: nowrap;
+        }
+
+        .flex-container .box {
+            width: 20%;
+            margin: 10px;
+            text-align: center;
+            line-height: 75px;
+            font-size: 30px;
+        }
+
+        textFomat {
+            text-align: center;
+        }
+
+        .box1 {
+            float: left;
+            width: 100%;
+            padding: 10px;
+            text-align: center;
+            text-height: auto;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+    </style>
+    <title>
+        High Score Board
+    </title>
+</head>
+
+<body onload="displayHighScore()">
+    <div class="background-image">
+        <br><br><br>
+        <div class="clearfix">
+            <div class="box1">
+                <h1>High Score</h1>
+            </div>
+        </div>
+
+        <div class="flex-container">
+            <div class="box"></div>
+
+            <div class="box">
+                <h3>Player:</h3>
+                <h4 id="nameDemo"></h4>
+            </div>
+
+            <div class="box">
+                <h3><br></h3>
+                <p class="color" id="dotDemo"></p>
+            </div>
+
+            <div class="box">
+                <h3>Score:</h3>
+                <h4 id="scoreDemo"></h4>
+            </div>
+
+            <div class="box"></div>
+        </div>
+
+        <div class="box1">
+            <a href="./car_system.html">
+                <h3 style="font-size: 50px; color:  crimson;
+                text-shadow: 2px 2px black;">Back to Menu</h3>
+            </a>
+        </div>
+
+    </div>
+</body>
+
+</html>
