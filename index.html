@@ -7,6 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <!-- FOR REACT COMPONENT -->
+    <!-- <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script> -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+
     <link rel="stylesheet" href="style.css">
     <!-- My page ICON -->
     <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -78,9 +83,13 @@
         <!-- Menu: Game List  -->
         <div id="gameArea" class="navItems">
             <ol>
-                <h2>Under construction...</h2>
+                <h2>Game List</h2>
+                <li id="game1Btn">Tic Tac Ton</li>
             </ol>
+            <!-- <div id="tictactonGame"></div> -->
+            <div id="game1"></div>
         </div>
+
 
 
         <!--  -->
@@ -108,6 +117,7 @@
     </div>
 
     <script src="scrpit.js"></script>
+    <script src="react.js"></script>
 </body>
 
 </html>

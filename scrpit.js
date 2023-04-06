@@ -1,3 +1,4 @@
+
 $(() => {
     $('#myProfile').hide();
     $('.navItems').hide();
