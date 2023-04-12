@@ -7,10 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-    <!-- FOR REACT COMPONENT -->
-    <!-- <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script> -->
-    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
 
     <link rel="stylesheet" href="style.css">
     <!-- My page ICON -->
@@ -19,12 +15,12 @@
 </head>
 
 <body>
-    <div class="center">
+    <div id="profile" class="center">
         <!--  -->
         <!-- Author Profile -->
         <!--  -->
         <h1 style="display: inline-block;">
-            <span id="myName">Ming Chen</span>
+            <span id="myName" class="rainbow">Ming Chen</span>
             <span style=" position:absolute; font-size: 15px;
             color:lightsalmon; ">
                 <span style=" font-size: 20px; display:inline-block; transform:
@@ -36,7 +32,7 @@
 
         <div id="myProfile" style="margin: 0 auto; width: 90%; border: 2px solid lightpink;">
             <p>Welecome to my page</p>
-            <p class="rainbow_text">Though the pages is under developemeent, enjoying your visit.</p>
+            <p class="colorfultext">Though the pages is under developemeent, enjoying your visit.</p>
             <a href="MC_SDE.pdf" download>Download Ming's Resume</a>
         </div>
 
@@ -48,7 +44,7 @@
     <!--  -->
     <!-- Navigation -->
     <!--  -->
-    <nav class="MyNavigation">
+    <nav class="MyNavigation,rainbow">
         <ul>
             <li><a href="index.html">Ming</a></li>
             <li id="projectsMenu">Projects</li>
@@ -82,42 +78,54 @@
         <!--  -->
         <!-- Menu: Game List  -->
         <div id="gameArea" class="navItems">
-            <ol>
-                <h2>Game List</h2>
-                <li id="game1Btn">Tic Tac Ton</li>
-            </ol>
+            <div class="left20">
+                <ol>
+                    <h2>Game List</h2>
+                    <li id="game1Btn">Snake &#128013;</li>
+                </ol>
+            </div>
+
             <!-- <div id="tictactonGame"></div> -->
-            <div id="game1"></div>
+            <div class="right80" style="display:flex; justify-content: center; align-items: center; flex-direction: column; background-color:lightcyan;">
+                <h3 id="gameInfo">Click game to play, have fun</h3>
+                <canvas id="canvas" width="500" height="500"></canvas>
+                <!-- <script type="module" src="./src/js/snakeGame.js"></script> -->
+            </div>
+            <!-- <h2 id="gameinfo" style="margin-top: 0; position: relative; top: 0;">Lv: 1&nbsp;&nbsp;&nbsp;Score: 0</h2>
+                <canvas style="position:absolute; width:600px; height:600px; border:2px solid black; background-color:rgba(206, 238, 248, 0.1);"></canvas> -->
+
         </div>
+    </div>
 
 
 
-        <!--  -->
-        <!-- Menu: Contact Info  -->
-        <div id="contactArea" class="navItems">
-            <ol>
-                <address>
-                    <h2>Contact Information</h2>
-                    <p>Name: Ming Chen</p>
-                    <p>Email: chenming0317@gmail.com</p>
-                    <p>QQ: 996753868</p>
-                    <p>Wei-Chart: chendaye222</p>
-                    <p>Address: Riverside, CA USA</p>
-                </address>
-            </ol>
-        </div>
+    <!--  -->
+    <!-- Menu: Contact Info  -->
+    <div id="contactArea" class="navItems">
+        <ol>
+            <address>
+                <h2>Contact Information</h2>
+                <p>Name: Ming Chen</p>
+                <p>Email: <a href="mailto:chenming0317@gmail.com">chenming0317@gmail.com</a></p>
+                <p>QQ: 996753868</p>
+                <p>Wei-Chart: chendaye222</p>
+                <p>Address: Riverside, CA USA</p>
+            </address>
+        </ol>
+    </div>
 
 
-        <!--  -->
-        <!-- Project List  -->
+    <!--  -->
+    <!-- Project List  -->
 
-        <!--  -->
-        <!-- Project List  -->
+    <!--  -->
+    <!-- Project List  -->
 
     </div>
 
     <script src="scrpit.js"></script>
-    <script src="react.js"></script>
+    <script src="./src/js/snakeGame.js"></script>
+
 </body>
 
 </html>

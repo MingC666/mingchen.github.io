@@ -7,6 +7,20 @@ body{
 	border: 1px solid cyan;
 }
 
+.rainbow:hover, ul li:hover, ol li:hover, ul li a:hover, ol li a:hover, .colorfultext {
+	background-image: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+
+	/* cursor: crosshair; */
+	cursor: pointer;
+}
+
+/* colorfulText{
+	background-image: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+} */
 nav {
 	background-color: rgb(178, 227, 243);
 	color: #fff;
@@ -31,10 +45,6 @@ nav ul li a {
 	color: #fff;
 	text-decoration: none;
 	padding: 0.5rem;
-}
-
-nav ul li:hover {
-	background-color: lightskyblue;
 }
 
 .myProfileImage{
@@ -79,4 +89,25 @@ address {
 	padding: 20px;
 	margin-bottom: 30px;
 	color: #404040;
+}
+
+
+.left20{
+	/* background-color: lightcoral; */
+	float: left;
+	width: 20%;
+	height: 700px;
+}
+.right80{
+	/* background-color:pink; */
+	float: left;
+	width: 75%;
+	height: 700px;
+}
+
+#clock {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	font-size: 24px;
 }

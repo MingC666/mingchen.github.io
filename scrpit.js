@@ -1,5 +1,5 @@
-
 $(() => {
+
     $('#myProfile').hide();
     $('.navItems').hide();
 
@@ -27,4 +27,31 @@ $(() => {
         $('#contactArea').show();
     });
 
+    //////Game Button
+
+    const clock = $('<div id="clock"></div>');
+
+
+    ////////////////////////////////
+    //////  Date Time display  /////
+    ///////////////////////////////
+    function updateTime() {
+        var now = new Date();
+        var hours = now.getHours();
+        var minutes = now.getMinutes();
+        var seconds = now.getSeconds();
+        var ampm = hours >= 12 ? "PM" : "AM";
+        hours = hours % 12;
+        if (hours == 0) hours = 12;
+        var dateString = now.toDateString();
+        var timeString = hours + ':' + (minutes < 10 ? '0' : '') + minutes + ' ' + ampm;
+        var timeString = `${hours}:${minutes < 10 ? "0" : ""}${minutes} ${ampm}`
+        clock.text(dateString + ' ' + timeString);
+    }
+
+    setInterval(updateTime, 1000);
+
+    const profile = $('#profile');
+    setInterval(updateTime, 1000);
+    profile.append(clock);
 })
