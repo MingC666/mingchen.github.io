@@ -27,10 +27,9 @@ $(() => {
         $('#contactArea').show();
     });
 
-    //////Game Button
 
-    const clock = $('<div id="clock"></div>');
-
+    // const clock = $('<div id="clock"></div>');
+    const clock = $('<div>').attr('id', 'clock');
 
     ////////////////////////////////
     //////  Date Time display  /////
@@ -50,8 +49,6 @@ $(() => {
     }
 
     setInterval(updateTime, 1000);
-
     const profile = $('#profile');
-    setInterval(updateTime, 1000);
     profile.append(clock);
 })
