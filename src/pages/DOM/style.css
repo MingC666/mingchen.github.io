@@ -1,0 +1,35 @@
+.container{
+    width: 800px;
+    height: 250px;
+    border: 2px coral dotted;
+}
+
+button{
+    width: 200px;
+    background-color: bisque;
+}
+
+input{
+    color: rgb(185, 176, 176);
+    width: 300px;
+}
+
+.demo{
+    font-size: 30px;
+    text-decoration: underline, ;
+    color: rgb(161, 56, 156);
+    font-weight: bold;
+}
+.mycss6{
+    font-size: 20px;
+    color: blueviolet;
+}
+.special{
+    font-size: 30px;
+    text-decoration:solid;
+    text-shadow: 0cm;
+    font-weight: bold;
+}
+.redColor{
+    color: red;
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <title>DOM Manipulating</title>
+</head>
+<body>
+    <!-- 1. Element.text()/html()/val() Demo -->
+    <div class="container">
+        <p class="demo">1. Element.text()/html()/val() Demo</p>
+        <button id="btn1">1-Get below text by text()</button>
+        <input id="output1" value="Result will be here!!!"><br>
+        <button id="btn1_2">2-Get below text By html()</button>
+        <input id="output1_2" value="Result will be here~~~"><br>
+        <button id="btn1_3">3-Get up button's input's value</button>
+        <input id="output1_3" value="Result will be here">Click 3,1/2, 3<br>
+        <p id="output2"></p>
+        <p id='myP' style="font-size:25px; color:brown;">This is <b>TESTING</b> paragraph</b></p>
+    </div>
+
+     <!-- 2. Change Element attr(name, new_val) Demo -->
+     <div class="container">
+        <p class="demo">2. Change Element attr(name, new_val) Demo</p>
+        <button id='btn2'>Change below link by attr()</button>
+        <p><a id="mylink" href="https://www.google.com" target="_blank">Go to google</a></p>
+    </div>
+
+    <!-- 3. Create new HTML element (append/prepend/) add as children -->
+    <div class="container">
+        <p class="demo" id="demo3Title">3. Create new HTML element (append/prepend/)</p>
+        <button id="btn3">Create 3 new 'p' elements</button>
+        <button id="btn3_2">Change Color</button>
+        <div>
+            <p id="demo3">Original paragraph</p>
+        </div>
+    </div>
+
+    <!-- 4. Create new HTML element (after/before/) add as seperated content-->
+    <div class="container">
+        <p class="demo" id="demo4Title">4. Create new HTML element (after/before/)</p>
+        <button id="btn4">Create 3 new 'p' elements</button>
+        <button id="btn4_2">Change Color</button>
+        <div>
+            <p id="demo4">Original paragraph</p>
+        </div>
+    </div>
+
+    <!-- 5. Remove the the elemnt and its children-->
+    <div class="container">
+        <p class="demo">5. Remove the the elemnt and its children 'Remove'</p>
+        <button id="btn5">Remove all div contents</button>
+        <div id="div5" style="width:250px; height:100px; background-color:yellow;">
+            <p>Inside div tag</p>
+            <p> 1st Paragraph</p>
+            <p> 2nd Paragraph</p>
+        </div>
+    </div>
+
+    <!-- 5_2 Remove the the elemnt and its children-->
+    <div class="container">
+        <p class="demo">5. Remove the the elemnt and its children 'Empty()'</p>
+        <button id="btn5_2">Remove all div contents</button>
+        <div id="div5_2" style="width:250px; height:100px; background-color:yellow;">
+            <p>Inside div tag</p>
+            <p> 1st Paragraph</p>
+            <p> 2nd Paragraph</p>
+        </div>
+    </div>
+
+    <!-- 5_3 Remove the the elemnt and its children-->
+    <div class="container">
+        <p class="demo">5. Remove the the elemnt with parameters 'Empty()'</p>
+        <button id="btn5_3_1">Remove first paragraph</button>
+        <button id="btn5_3_2">Remove arest paragraph</button>
+        <div style="width:250px; height:100px; background-color:yellow;">
+            <p id="p531"> 1st Paragraph; id=p531</p>
+            <p id="p532"> 2nd Paragraph; id=p532</p>
+            <p id="p533"> 3rd Paragraph; id=p533</p>
+        </div>
+    </div>
+
+    <!-- 6 add class to element-->
+    <div class="container" style="height:300px">
+        <p class="demo" id="demo6Title">6 add class to element $('ele1, ele2').addClass("cl1 cl2...")</p>
+        <button id="btn6_0">toggle class for title; toggleClass</button>
+        <button id="btn6_1">add 'mycss6' to p1 p2</button>
+        <button id="btn6_2">add 'special redColor' to p2 p3</button>
+        <p id="p61"> p1: Will me change???</p>
+        <p id="p62"> p2: I guess so</p>
+        <p id="p63"> P3: What?</p>
+    </div>
+
+    <!-- 7 Change Css properties-->
+    <div class="container" >
+        <p class="demo">7 Change Css properties</p>
+        <button id="btn7_1">Change singe prop</button>
+        <button id="btn7_2">Change multi-prop</button>
+        <p id="p71"> Using: css("prop", "value")</p>
+        <p id="p72"> Using: css({"prop1":"val1", "prop2":"val2",...})</p>
+    </div>
+
+<script src="script.js"></script>
+</body>
+</html>
