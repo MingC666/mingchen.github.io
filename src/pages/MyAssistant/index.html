@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Test Input and Output Page</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="navbar-collapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="menuDropdown" role="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Menu
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="menuDropdown">
+                        <a class="dropdown-item" href="#">Home</a>
+                        <a class="dropdown-item" href="#">About</a>
+                        <a class="dropdown-item" href="#">Services</a>
+                        <a class="dropdown-item" href="#">Contact</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="loginDropdown" role="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Login
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="loginDropdown">
+                        <a class="dropdown-item" href="#">Login</a>
+                        <a class="dropdown-item" href="#">Register</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Forgot Password</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <h2>API KEY</h2>
+    <textarea id="inputApiKey" placeholder="Enter API KEY"></textarea>
+    <button id="apiBtn" class="btn btn-primary">Submit</button>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="input-container">
+                    <h2>Input</h2>
+                    <textarea id="inputText" placeholder="Enter text..."></textarea>
+                    <button id="submitBtn" class="btn btn-primary">Submit</button>
+                    <button id="deleteBtn" class="btn btn-danger">Delete All</button>
+                </div>
+            </div>
+            <div class="col">
+                <div class="output-container">
+                    <h2>Output</h2>
+                    <div class="output-text-container">
+                        <textarea id="outputText" readonly></textarea>
+                        <button id="copyBtn" class="btn btn-secondary">Copy</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="./script.js"></script>
+
+    <script>
+        
+    </script>
+</body>
+
+</html>
