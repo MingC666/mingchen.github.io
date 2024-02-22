@@ -3,6 +3,11 @@ var heal1 = 100;
 var heal2 = 100;
 var heal3 = 100;
 var heal4 = 100;
+
+var score1 = 0;
+var score2 = 0;
+var score3 = 0;
+var score4 = 0;
 /******************************************/
 /*    This just for the reduce heal      */
 /****************************************/
@@ -40,21 +45,23 @@ function player1() {
 function player2() {
     if (flag2) {
         Player2_reduceHealth();
-        flag1 = false;
+        flag2 = false;
     }
 }
+// Similarly update for player3 and player4
+
 // Player3 call this function
 function player3() {
     if (flag3) {
         Player3_reduceHealth();
-        flag1 = false;
+        flag3 = false;
     }
 }
 // Player4 call this function
 function player4() {
     if (flag4) {
         Player4_reduceHealth();
-        flag1 = false;
+        flag4 = false;
     }
 }
 
@@ -64,13 +71,16 @@ function Player1_reduceHealth() {
     heal1 -= 10;
     if (heal1 <= 0) {
         heal1 = 0;
+        score1 = score;
         // Code end the player action
 
-        document.getElementById("demo1").innerHTML = "You dead";
+        // document.getElementById("demo1").innerHTML = "You dead";
+        document.getElementById("demo1").innerHTML = "Dead. SCORE: " + score1;
     }
     ele1.style.width = heal1 + '%';
     ele1.innerHTML = heal1 * 1 + '%';
 }
+
 function Player2_reduceHealth() {
     var ele2 = document.getElementById("player2_bar");
     heal2 -= 10;
@@ -78,7 +88,8 @@ function Player2_reduceHealth() {
         heal2 = 0;
         // Code end the player action
 
-        document.getElementById("demo2").innerHTML = "You dead";
+        score2 = score
+        document.getElementById("demo2").innerHTML = "Dead. SCORE: " + score2;
     }
     ele2.style.width = heal2 + '%';
     ele2.innerHTML = heal2 * 1 + '%';
@@ -90,7 +101,8 @@ function Player3_reduceHealth() {
         heal3 = 0;
         // Code end the player action
 
-        document.getElementById("demo3").innerHTML = "You dead";
+        score3 = score
+        document.getElementById("demo3").innerHTML = "Dead. SCORE: " + score3;
     }
     ele3.style.width = heal3 + '%';
     ele3.innerHTML = heal3 * 1 + '%';
@@ -102,7 +114,8 @@ function Player4_reduceHealth() {
         heal4 = 0;
         // Code end the player action
 
-        document.getElementById("demo4").innerHTML = "You dead";
+        score4 = score
+        document.getElementById("demo4").innerHTML = "Dead. SCORE: " + score4;
     }
     ele4.style.width = heal4 + '%';
     ele4.innerHTML = heal4 * 1 + '%';
@@ -115,7 +128,7 @@ function startGame() {
     t = setInterval(updateScore, 50);
 }
 function updateScore() {
-    if (heal1 === 0) {
+    if (heal1 === 0 && heal2 === 0 && heal3 === 0 && heal4 === 0) {
         clearInterval(t);
     }
     score++;
