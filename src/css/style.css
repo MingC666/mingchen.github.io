@@ -51,7 +51,7 @@ nav ul li a {
 	width: 200px;
 	height: 200px;
 	margin: 0 auto;
-	background: url('./src/image/profile1.jpg');
+	background: url('../images/profile1.jpg');
 	background-size: cover;
 	background-position: center; 
 	overflow: hidden;
@@ -62,7 +62,7 @@ nav ul li a {
 	content: '';
 	width: 50%;
 	height: 200px;
-	background: url('./src/image/profile2.jpg');
+	background: url('../images/profile2.jpg');
 	background-size: cover;
 	/* background-position: center;  */
 	transition: all 2s;
