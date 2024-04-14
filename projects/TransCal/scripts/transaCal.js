@@ -47,10 +47,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 <td>${id}</td>
                 <td contenteditable="true">${price.toFixed(2)}</td>
                 <td>
-                    <button class="deleteBtn myBtn">Delete</button>
+                    <button class="deleteBtn myBtn">删除 Delete</button>
                 </td>
                 <td>
-                    <button class="updateBtn myBtn">Update</button>
+                    <button class="updateBtn myBtn">更改 Update</button>
                 </td>
             </tr>`;
         table.innerHTML += newRow;
