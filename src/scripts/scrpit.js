@@ -27,28 +27,29 @@ $(() => {
         $('#contactArea').show();
     });
 
-
-    // const clock = $('<div id="clock"></div>');
-    const clock = $('<div>').attr('id', 'clock');
-
     ////////////////////////////////
     //////  Date Time display  /////
     ///////////////////////////////
-    function updateTime() {
-        var now = new Date();
-        var hours = now.getHours();
-        var minutes = now.getMinutes();
-        var seconds = now.getSeconds();
-        var ampm = hours >= 12 ? "PM" : "AM";
-        hours = hours % 12;
-        if (hours == 0) hours = 12;
-        var dateString = now.toDateString();
-        var timeString = hours + ':' + (minutes < 10 ? '0' : '') + minutes + ' ' + ampm;
-        var timeString = `${hours}:${minutes < 10 ? "0" : ""}${minutes} ${ampm}`
-        clock.text(dateString + ' ' + timeString);
+
+    // Function to update the clock
+    function updateFancyClock() {
+        const now = new Date();
+
+        // Format date and time
+        const date = now.toISOString().split('T')[0]; // YYYY-MM-DD
+        const time = now.toTimeString().split(' ')[0]; // HH:MM:SS
+        const newContent = `${date} ${time}`; // Combine date and time
+
+        // Get the clock container
+        const clockContainer = document.getElementById('time');
+
+        // Update the clock content
+        clockContainer.textContent = newContent;
     }
 
-    setInterval(updateTime, 1000);
-    const profile = $('#profile');
-    profile.append(clock);
+    // Update the clock every second
+    setInterval(updateFancyClock, 1000);
+
+    // Initial call to display the clock immediately
+    updateFancyClock();
 })

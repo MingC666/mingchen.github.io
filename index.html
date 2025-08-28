@@ -9,6 +9,7 @@
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 
     <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="stylesheet" href="./src/css/clock.css">
     <!-- My page ICON -->
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <title>Ming's Paradise</title>
@@ -16,57 +17,49 @@
 
 <body>
     <div id="profile" class="center">
-        <!--  -->
         <!-- Author Profile -->
-        <!--  -->
         <h1 style="display: inline-block;">
             <span id="myName" class="rainbow">Ming Chen</span>
-            <span style=" position:absolute; font-size: 15px;
-            color:lightsalmon; ">
-                <span style=" font-size: 20px; display:inline-block; transform:
-            rotate(-90deg);">
+            <span style="position:absolute; font-size: 15px; color:lightsalmon;">
+                <span style="font-size: 20px; display:inline-block; transform: rotate(-90deg);">
                     &#x261D;
                 </span>
-                (Click for more info)</span>
+                (Click for more info)
+            </span>
         </h1>
 
         <div id="myProfile" style="margin: 0 auto; width: 90%; border: 2px solid lightpink;">
-            <p>Welecome to my page</p>
-            <p class="colorfultext">Though the pages is under developemeent, enjoying your visit.</p>
+            <p>Welcome to my page</p>
+            <p class="colorfultext">Though the page is under development, enjoy your visit.</p>
             <a href="./src/MC_SDE.pdf" download>Download Ming's Resume</a>
         </div>
 
-        <div class="myProfileImage">
-        </div>
+        <div class="myProfileImage"></div>
     </div>
 
+    <!-- 时钟组件 -->
+    <div id="clockContainer" class="clock-box">
+        <div id="time" class="clock-time"></div>
+    </div>
 
-    <!--  -->
-    <!--                                    Navigation                               -->
-    <!--  -->
-    <nav class="MyNavigation,rainbow">
+    <!-- Navigation -->
+    <nav class="MyNavigation rainbow">
         <ul>
             <li><a href="index.html">Ming</a></li>
             <li id="projectsMenu">Projects</li>
             <li id="gameMenu">My Games</li>
-            <li id="contactMenu">Contact</a></li>
+            <li id="contactMenu">Contact</li>
         </ul>
         <div class="logout">
             <a href="#">Log Out</a>
         </div>
     </nav>
 
-
-
-    <!--  -->
-    <!--                                    Content                               -->
-    <!--  -->
+    <!-- Content -->
     <div id="displayArea">
-        <!--  -->
-        <!-- Menu: Project List  -->
+        <!-- Project List -->
         <div id="projectArea" class="navItems">
             <ol>
-
                 <h1>Project List</h1>
                 <li><a href="./projects/MyAssistant/index.html" target="_blank">My Chart GPT</a></li>
                 <li><a href="./projects/TransCal/index.html" target="_blank">TransaCal Simpler Version Demo</a></li>
@@ -78,8 +71,7 @@
             </ol>
         </div>
 
-        <!--  -->
-        <!-- Menu: Game List  -->
+        <!-- Game List -->
         <div id="gameArea" class="navItems">
             <div class="left20">
                 <ol>
@@ -88,23 +80,14 @@
                     <li><a href="./projects/row your boat/index.html">Row Your Boat (Unity)</a></li>
                 </ol>
             </div>
-
-            <!-- <div id="tictactonGame"></div> -->
             <div class="right80" style="display:flex; justify-content: center; align-items: center; flex-direction: column; background-color:lightcyan;">
                 <h3 id="gameInfo">Click game to play, have fun</h3>
                 <canvas id="canvas" width="500" height="500"></canvas>
-                <!-- <script type="module" src="./src/js/snakeGame.js"></script> -->
             </div>
-            <!-- <h2 id="gameinfo" style="margin-top: 0; position: relative; top: 0;">Lv: 1&nbsp;&nbsp;&nbsp;Score: 0</h2>
-                <canvas style="position:absolute; width:600px; height:600px; border:2px solid black; background-color:rgba(206, 238, 248, 0.1);"></canvas> -->
-
         </div>
     </div>
 
-
-
-    <!--  -->
-    <!-- Menu: Contact Info  -->
+    <!-- Contact Info -->
     <div id="contactArea" class="navItems">
         <ol>
             <address>
@@ -118,18 +101,9 @@
         </ol>
     </div>
 
-
-    <!--  -->
-    <!-- Project List  -->
-
-    <!--  -->
-    <!-- Project List  -->
-
-    </div>
-
     <script src="./src/scripts/scrpit.js"></script>
     <script src="./src/scripts/snakeGame.js"></script>
-
+    <script src="./src/scripts/clock.js" defer></script>
 </body>
 
 </html>

@@ -1,0 +1,205 @@
+/* Clock container */
+.clock-box {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px 25px;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+}
+
+/* 日期样式 */
+.clock-date {
+    font-size: 18px;
+    margin-bottom: 5px;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Time container */
+.clock-time {
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+    color: #fff;
+}
+
+/* Single digit container */
+.digit-wrapper {
+    position: relative;
+    width: 20px;
+    height: 30px;
+    overflow: hidden;
+}
+
+/* Digit styles */
+.digit {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Animation states */
+.digit.new {
+    transform: translateY(-100%);
+}
+
+.digit.new.slide-down {
+    transform: translateY(0);
+}
+
+.digit.old {
+    transform: translateY(0);
+}
+
+.digit.old.slide-out {
+    transform: translateY(100%);
+}
+
+/* 数字翻页动画 */
+@keyframes flip {
+    0% {
+        transform: rotateX(0);
+    }
+    50% {
+        transform: rotateX(-90deg);
+    }
+    100% {
+        transform: rotateX(0);
+    }
+}
+
+.flip {
+    display: inline-block;
+    animation: flip 0.5s ease-in-out;
+}
+
+/* Wrapper for each digit */
+.digit-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 20px; /* Adjust based on font size */
+    height: 40px; /* Adjust based on font size */
+    overflow: hidden;
+    text-align: center;
+}
+
+/* New digit style */
+.new-digit {
+    position: absolute;
+    top: -100%; /* Start above the container */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(0);
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Old digit style */
+.old-digit {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Slide-down animation for new digit */
+.new-digit.slide-down {
+    transform: translateY(100%); /* Slide down into the container */
+}
+
+/* Fade-out animation for old digit */
+.old-digit.fade-out {
+    opacity: 0; /* Fade out the old digit */
+}
+
+/* Character container */
+.char-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 15px;
+    height: 30px;
+    overflow: hidden;
+}
+
+/* Character styles */
+.char {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease-out;
+}
+
+/* New character (starts above) */
+.char.new {
+    transform: translateY(-100%);
+}
+
+/* Active character (slides down) */
+.char.new.active {
+    transform: translateY(0);
+}
+
+/* New character style */
+.new-char {
+    position: absolute;
+    top: -100%; /* Start above the container */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(0);
+    transition: transform 0.5s ease-in-out;
+    font-size: 28px; /* Match the clock font size */
+    color: #333; /* Ensure the text is visible */
+}
+
+/* Old character style */
+.old-char {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0; /* Hide old character */
+}
+
+/* Slide-down animation */
+.new-char.slide-down {
+    transform: translateY(100%); /* Slide down into the container */
+}
+
+/* New content style */
+.new-content {
+    position: absolute;
+    top: -100%; /* Start above the container */
+    left: 0;
+    width: 100%;
+    text-align: center;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Slide-down animation */
+.new-content.slide-down {
+    transform: translateY(100%); /* Slide down into the container */
+}
+
+/* Body background */
+body {
+    background: linear-gradient(to bottom, #fdfbfb, #ebedee);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
